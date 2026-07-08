@@ -1,5 +1,4 @@
 # Lyftr-AI-Appoinment-Assingment
-# Lyftr AI Appointment Assignment
 
 A Multi-Timezone Appointment Booking System built for the Lyftr AI Full Stack Assignment.
 
