@@ -1,3 +1,4 @@
+import CardHeader from "../components/common/CardHeader";
 import GlassCard from "../components/common/GlassCard";
 import Navbar from "../components/layout/Navbar"
 
@@ -13,30 +14,42 @@ export default function Dashboard() {
                 <section className="grid grid-cols-12 gap-6">
 
                     <GlassCard className="col-span-4">
-                        <h2 className="text-xl font-semibold">
-                            Business Overview
-                        </h2>
-                    </GlassCard>
 
-                    <GlassCard className="col-span-8">
-                        <h2 className="text-xl font-semibold">
-                            Calendar
-                        </h2>
-                    </GlassCard>
+    <CardHeader
+        title="Business Overview"
+        description="Working hours, holidays and business settings."
+    />
+
+</GlassCard>
+
+                   <GlassCard className="col-span-8">
+
+    <CardHeader
+        title="Calendar"
+        description="Manage appointments across multiple time zones."
+    />
+
+</GlassCard>
 
                 </section>
 
-                <GlassCard>
-                    <h2 className="text-xl font-semibold">
-                        Available Slots
-                    </h2>
-                 </GlassCard>
+               <GlassCard>
+
+    <CardHeader
+        title="Available Slots"
+        description="Configure recurring and custom availability."
+    />
+
+</GlassCard>
 
                 <GlassCard>
-                    <h2 className="text-xl font-semibold">
-                        Upcoming Appointments
-                    </h2>
-                </GlassCard>
+
+    <CardHeader
+        title="Upcoming Appointments"
+        description="View and manage scheduled bookings."
+    />
+
+</GlassCard>
 
             </main>
         </div>
