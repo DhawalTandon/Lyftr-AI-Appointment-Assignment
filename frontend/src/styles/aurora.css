@@ -1,0 +1,45 @@
+.aurora-background {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(59,130,246,.45),
+      transparent 45%),
+
+    radial-gradient(circle at top right,
+      rgba(6,182,212,.28),
+      transparent 40%),
+
+    radial-gradient(circle at bottom left,
+      rgba(255,255,255,.8),
+      transparent 55%),
+
+    linear-gradient(
+  135deg,
+  #edf7ff,
+  #dbeafe,
+  #c7e9ff
+);
+
+  background-size: 180% 180%;
+
+  animation: auroraMove 18s ease infinite;
+}
+
+@keyframes auroraMove{
+
+  0%{
+    background-position:0% 50%;
+  }
+
+  50%{
+    background-position:100% 50%;
+  }
+
+  100%{
+    background-position:0% 50%;
+  }
+
+}
