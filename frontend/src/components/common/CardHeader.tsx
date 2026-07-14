@@ -12,12 +12,12 @@ export default function CardHeader({
   return (
     <div className="mb-6 flex items-start justify-between">
       <div>
-        <h2 className="text-2xl font-bold tracking-tight text-slate-900">
+        <h2 className="text-2xl font-extrabold tracking-tight text-slate-900">
           {title}
         </h2>
 
         {description && (
-          <p className="mt-1 text-sm text-slate-600">
+          <p className="mt-1 text-sm text-slate-500">
             {description}
           </p>
         )}

@@ -1,24 +1,40 @@
+import GlassButton from "../common/GlassButton";
+import { Globe2 } from "lucide-react";
+<Globe2 className="text-blue-600" size={30} />
+
 export default function Navbar() {
   return (
-    <header className="border-b border-slate-200 bg-white">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <div className="flex items-center gap-3">
-          <span className="text-2xl">🌍</span>
+    <header className="sticky top-4 z-50 px-6">
+      <div
+        className="
+          glass-card
+          mx-auto
+          flex
+          h-20
+          max-w-7xl
+          items-center
+          justify-between
+          rounded-3xl
+          px-6
+        "
+      >
+        <div className="flex items-center gap-5">
+          <span className="text-3xl">🌍</span>
 
           <div>
-            <h1 className="text-lg font-bold text-slate-900">
+            <h1 className="text-xl font-bold text-slate-900">
               Lyftr AI
             </h1>
 
-            <p className="text-xs text-slate-500">
+            <p className="text-sm text-slate-500">
               Appointment Booking System
             </p>
           </div>
         </div>
 
-        <div className="rounded-lg bg-slate-100 px-4 py-2 text-sm font-medium">
+        <GlassButton>
           Admin
-        </div>
+        </GlassButton>
       </div>
     </header>
   );

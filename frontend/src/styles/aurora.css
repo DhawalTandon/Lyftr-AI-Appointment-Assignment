@@ -1,45 +1,40 @@
-.aurora-background {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
+.aurora-background{
 
-  background:
-    radial-gradient(circle at top left,
-      rgba(59,130,246,.45),
-      transparent 45%),
+position:fixed;
 
-    radial-gradient(circle at top right,
-      rgba(6,182,212,.28),
-      transparent 40%),
+inset:0;
 
-    radial-gradient(circle at bottom left,
-      rgba(255,255,255,.8),
-      transparent 55%),
+z-index:-2;
 
-    linear-gradient(
-  135deg,
-  #edf7ff,
-  #dbeafe,
-  #c7e9ff
+background:
+
+radial-gradient(
+circle at 15% 15%,
+rgba(37,99,235,.30),
+transparent 40%
+),
+
+radial-gradient(
+circle at 85% 20%,
+rgba(14,165,233,.30),
+transparent 42%
+),
+
+radial-gradient(
+circle at 50% 80%,
+rgba(255,255,255,.35),
+transparent 55%
+),
+
+linear-gradient(
+135deg,
+#f9fbff,
+#edf7ff,
+#dff3ff
 );
 
-  background-size: 180% 180%;
+background-size:200% 200%;
 
-  animation: auroraMove 18s ease infinite;
-}
-
-@keyframes auroraMove{
-
-  0%{
-    background-position:0% 50%;
-  }
-
-  50%{
-    background-position:100% 50%;
-  }
-
-  100%{
-    background-position:0% 50%;
-  }
+animation:auroraMove 18s ease infinite;
 
 }

@@ -1,57 +1,85 @@
+import { useState } from "react";
+import BusinessDialog from "../dialogs/BusinessDialog";
+import BusinessOverview from "../components/business/BusinessOverview";
 import CardHeader from "../components/common/CardHeader";
 import GlassCard from "../components/common/GlassCard";
-import Navbar from "../components/layout/Navbar"
+import Navbar from "../components/layout/Navbar";
 
 export default function Dashboard() {
-    return (
+  const [isBusinessDialogOpen, setIsBusinessDialogOpen] = useState(false);
 
-        <div className="relative min-h-screen">
-            <div className="aurora-background" />
-            <Navbar />
+  return (
+    <div className="relative min-h-screen">
+      <div className="aurora-background" />
 
-            <main className="mx-auto max-w-7xl space-y-6 p-8">
+      <Navbar />
 
-                <section className="grid grid-cols-12 gap-6">
+      <main className="mx-auto mt-28 max-w-7xl space-y-8 px-6 pb-10">
 
-                    <GlassCard className="col-span-4">
+        <section className="grid grid-cols-12 gap-6">
 
-    <CardHeader
-        title="Business Overview"
-        description="Working hours, holidays and business settings."
-    />
+          <GlassCard className="col-span-5">
+            <BusinessOverview
+    onConfigure={() => setIsBusinessDialogOpen(true)}
+/>
+          </GlassCard>
 
-</GlassCard>
-
-                   <GlassCard className="col-span-8">
+          <GlassCard className="col-span-8">
 
     <CardHeader
         title="Calendar"
         description="Manage appointments across multiple time zones."
     />
 
+    <div className="mt-8 flex h-80 items-center justify-center rounded-2xl border border-dashed border-white/20">
+
+        <span className="text-slate-500 transition-all duration-300"></span>
+
+    </div>
+
 </GlassCard>
 
-                </section>
+        </section>
 
-               <GlassCard>
+       <GlassCard>
 
     <CardHeader
         title="Available Slots"
         description="Configure recurring and custom availability."
     />
 
+    <div className="mt-10 flex h-36 items-center justify-center rounded-2xl border border-dashed border-white/30">
+
+        <span className="text-slate-500">
+            No slots configured yet
+        </span>
+
+    </div>
+
 </GlassCard>
 
-                <GlassCard>
+        <GlassCard>
 
     <CardHeader
         title="Upcoming Appointments"
         description="View and manage scheduled bookings."
     />
 
+    <div className="mt-10 flex h-36 items-center justify-center rounded-2xl border border-dashed border-white/30">
+
+        <span className="text-slate-500">
+            No appointments scheduled
+        </span>
+
+    </div>
+
 </GlassCard>
 
-            </main>
-        </div>
-    );
+      </main>
+      <BusinessDialog
+        open={isBusinessDialogOpen}
+        onClose={() => setIsBusinessDialogOpen(false)}
+      />
+    </div>
+  );
 }
