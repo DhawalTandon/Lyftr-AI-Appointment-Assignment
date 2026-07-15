@@ -1,4 +1,4 @@
-# Lyftr-AI-Appoinment-Assignment
+# Aurave-Business-Scheduling-Suite
 
 A Multi-Timezone Appointment Booking System built for the Lyftr AI Full Stack Assignment.
 
